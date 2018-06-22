@@ -5,7 +5,7 @@
 #
 # Usage:
 #   adb root
-#   adb push clean.sh /data/local/tmp
+#   adb push clean.sh /data/local/tmp/
 #   adb shell "sh /data/local/tmp/clean.sh"
 #
 

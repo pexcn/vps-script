@@ -4,7 +4,7 @@
 # This script is used after ROM upgrade in recovery mode.
 #
 # Usage:
-#   adb push clean-recovery.sh /data/local/tmp
+#   adb push clean-recovery.sh /data/local/tmp/
 #   adb shell "sh /data/local/tmp/clean-recovery.sh"
 #
 
