@@ -16,14 +16,13 @@ function remount_system() {
 }
 
 function fix_captive() {
-  # database keys from: https://github.com/LineageOS/android_frameworks_base/blob/lineage-15.1/core/java/android/provider/Settings.java
+  # database keys from: https://github.com/LineageOS/android_frameworks_base/blob/cm-14.1/core/java/android/provider/Settings.java
   settings put global captive_portal_mode 1
   settings put global captive_portal_use_https 1
   settings put global captive_portal_server www.qualcomm.cn
   settings put global captive_portal_http_url http://www.qualcomm.cn/generate_204
   settings put global captive_portal_https_url https://www.qualcomm.cn/generate_204
   settings put global captive_portal_fallback_url http://www.qualcomm.cn/generate_204
-  settings put global captive_portal_other_fallback_urls http://www.qualcomm.cn/generate_204
 }
 
 function clean_apps() {
@@ -31,26 +30,15 @@ function clean_apps() {
   rm -r /system/app/BasicDreams
   rm -r /system/app/BluetoothMidiService
   rm -r /system/app/BookmarkProvider
-  rm -r /system/app/BuiltInPrintService
   rm -r /system/app/Calendar
   rm -r /system/app/CaptivePortalLogin
-  rm -r /system/app/CarrierDefaultApp
-  rm -r /system/app/CompanionDeviceManager
   rm -r /system/app/CtsShimPrebuilt
   rm -r /system/app/Development
   rm -r /system/app/EasterEgg
   rm -r /system/app/Email
+  rm -r /system/app/Exchange2
   rm -r /system/app/HTMLViewer
   rm -r /system/app/LatinIME
-  rm -r /system/app/LineageBlackAccent
-  rm -r /system/app/LineageBlueAccent
-  rm -r /system/app/LineageCyanAccent
-  rm -r /system/app/LineageOrangeAccent
-  rm -r /system/app/LineagePinkAccent
-  rm -r /system/app/LineagePurpleAccent
-  rm -r /system/app/LineageRedAccent
-  rm -r /system/app/LineageBrownAccent
-  rm -r /system/app/LineageYellowAccent
   rm -r /system/app/PacProcessor
   rm -r /system/app/PhotoTable
   rm -r /system/app/PicoTts
