@@ -19,11 +19,11 @@ function fix_captive() {
   # database keys from: https://github.com/LineageOS/android_frameworks_base/blob/lineage-15.1/core/java/android/provider/Settings.java
   settings put global captive_portal_mode 1
   settings put global captive_portal_use_https 1
-  settings put global captive_portal_server www.google.cn
-  settings put global captive_portal_http_url http://www.google.cn/generate_204
-  settings put global captive_portal_https_url https://www.google.cn/generate_204
-  settings put global captive_portal_fallback_url http://www.google.cn/generate_204
-  settings put global captive_portal_other_fallback_urls http://www.google.cn/generate_204
+  settings put global captive_portal_server www.qualcomm.cn
+  settings put global captive_portal_http_url http://www.qualcomm.cn/generate_204
+  settings put global captive_portal_https_url https://www.qualcomm.cn/generate_204
+  settings put global captive_portal_fallback_url http://www.qualcomm.cn/generate_204
+  settings put global captive_portal_other_fallback_urls http://www.qualcomm.cn/generate_204
 }
 
 function clean_apps() {
