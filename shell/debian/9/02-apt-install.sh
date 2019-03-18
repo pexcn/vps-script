@@ -5,5 +5,5 @@ apt-get install --no-install-recommends -y \
   bash-completion dialog ca-certificates psmisc net-tools \
   mtr-tiny traceroute gcc make automake autoconf libtool \
   git nano curl
-dpkg -i misc/chkconfig*.deb
+dpkg -i packages/chkconfig*.deb
 apt-get clean
