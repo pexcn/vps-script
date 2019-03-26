@@ -9,7 +9,6 @@ alias grep='grep --color=auto'
 
 HISTFILESIZE=1000
 HISTSIZE=1000
-TZ=UTC-8
 EOF
 
 source ~/.bashrc
