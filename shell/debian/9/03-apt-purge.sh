@@ -27,6 +27,7 @@ apt-get purge -y \
   python3-requests python3-six python3-urllib3 python3.5 python3.5-minimal \
   rename reportbug rsyslog sgml-base task-english task-ssh-server tasksel \
   tasksel-data tcpd telnet usbutils util-linux-locales vim-common vim-tiny \
-  wamerican whiptail xauth xkb-data xml-core xxd xz-utils vim-runtime
+  wamerican whiptail xauth xkb-data xml-core xxd xz-utils vim-runtime \
+  busybox groff-base libglib2.0-0 libglib2.0-data qemu-guest-agent xdg-user-dirs
 apt-get autoremove -y
 apt-get clean
