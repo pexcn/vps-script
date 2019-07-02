@@ -1,6 +1,5 @@
 #!/bin/bash -e
 
-apt-get update
 apt-mark manual openssh-server
 apt-get purge -y \
   apt-listchanges bind9-host bsdmainutils bzip2 console-setup \
