@@ -1,5 +1,9 @@
 #!/bin/bash -e
 
+# Default settings:
+#   git name:  pexcn
+#   git email: i@pexcn.me
+
 case $(cat /etc/debian_version) in
   9*)
     bash debian/stretch/01-sources-list.sh
