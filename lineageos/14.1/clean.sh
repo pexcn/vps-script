@@ -1,21 +1,19 @@
-#!/system/bin/sh
+#!/bin/sh
 
-#
-# This script is used after Android system boot complete.
 #
 # Usage:
 #   adb root
 #   adb push clean.sh /data/local/tmp/
-#   adb shell "sh /data/local/tmp/clean.sh"
+#   adb shell "chmod +x /data/local/tmp/clean.sh"
+#   adb shell "/data/local/tmp/clean.sh"
 #
 
-function remount_system() {
-  #mount -o rw,remount /system
-  mount -o rw,remount -t ext4 /system
+mount_system() {
+  mount -o rw,remount /system
   sleep 1
 }
 
-function fix_captive() {
+fix_captive() {
   # database keys from: https://github.com/LineageOS/android_frameworks_base/blob/cm-14.1/core/java/android/provider/Settings.java
   settings put global captive_portal_mode 1
   settings put global captive_portal_use_https 1
@@ -25,79 +23,83 @@ function fix_captive() {
   settings put global captive_portal_fallback_url http://www.qualcomm.cn/generate_204
 }
 
-function clean_apps() {
-  # /system/app
-  rm -r /system/app/BasicDreams
-  rm -r /system/app/BluetoothMidiService
-  rm -r /system/app/BookmarkProvider
-  rm -r /system/app/Calendar
-  rm -r /system/app/CaptivePortalLogin
-  rm -r /system/app/CtsShimPrebuilt
-  rm -r /system/app/Development
-  rm -r /system/app/EasterEgg
-  rm -r /system/app/Email
-  rm -r /system/app/Exchange2
-  rm -r /system/app/HTMLViewer
-  rm -r /system/app/LatinIME
-  rm -r /system/app/PacProcessor
-  rm -r /system/app/PhotoTable
-  rm -r /system/app/PicoTts
-  rm -r /system/app/PrintRecommendationService
-  rm -r /system/app/PrintSpooler
-  rm -r /system/app/Profiles
-  rm -r /system/app/Stk
-  rm -r /system/app/Terminal
-  rm -r /system/app/UpdateSetting
-  rm -r /system/app/WAPPushManager
-  rm -r /system/app/WallpaperBackup
-  rm -r /system/app/qcrilmsgtunnel
-  rm -r /system/app/shutdownlistener
+clean_apps() {
+  cat <<- EOF | xargs rm -rf
+	/system/app/BasicDreams
+	/system/app/BluetoothMidiService
+	/system/app/BookmarkProvider
+	/system/app/Calendar
+	/system/app/CaptivePortalLogin
+	/system/app/CtsShimPrebuilt
+	/system/app/Development
+	/system/app/EasterEgg
+	/system/app/Email
+	/system/app/Exchange2
+	/system/app/HTMLViewer
+	/system/app/LatinIME
+	/system/app/PacProcessor
+	/system/app/PhotoTable
+	/system/app/PicoTts
+	/system/app/PrintRecommendationService
+	/system/app/PrintSpooler
+	/system/app/Profiles
+	/system/app/Stk
+	/system/app/Terminal
+	/system/app/UpdateSetting
+	/system/app/WAPPushManager
+	/system/app/WallpaperBackup
+	/system/app/qcrilmsgtunnel
+	/system/app/shutdownlistener
 
-  # /system/priv-app
-  rm -r /system/priv-app/AudioFX
-  rm -r /system/priv-app/BackupRestoreConfirmation
-  rm -r /system/priv-app/CalendarProvider
-  rm -r /system/priv-app/CellBroadcastReceiver
-  rm -r /system/priv-app/CtsShimPrivPrebuilt
-  rm -r /system/priv-app/EmergencyInfo
-  rm -r /system/priv-app/InputDevices
-  rm -r /system/priv-app/OmaDmclient
-  rm -r /system/priv-app/OneTimeInitializer
-  rm -r /system/priv-app/ProxyHandler
-  rm -r /system/priv-app/SharedStorageBackup
-  rm -r /system/priv-app/SprintHiddenMenu
-  rm -r /system/priv-app/Tag
-  rm -r /system/priv-app/Updater
+	/system/priv-app/AudioFX
+	/system/priv-app/BackupRestoreConfirmation
+	/system/priv-app/CalendarProvider
+	/system/priv-app/CellBroadcastReceiver
+	/system/priv-app/CtsShimPrivPrebuilt
+	/system/priv-app/EmergencyInfo
+	/system/priv-app/InputDevices
+	/system/priv-app/OmaDmclient
+	/system/priv-app/OneTimeInitializer
+	/system/priv-app/ProxyHandler
+	/system/priv-app/SharedStorageBackup
+	/system/priv-app/SprintHiddenMenu
+	/system/priv-app/Tag
+	/system/priv-app/Updater
+EOF
 }
 
-function clean_misc() {
-  rm -r /system/addon.d
-  rm -r /system/tts
+clean_misc() {
+  cat <<- EOF | xargs rm -rf
+	/system/addon.d
+	/system/tts
 
-  rm /system/recovery-from-boot.*
-  rm /system/etc/recovery-resource.dat
-  rm /system/etc/init.d/*
+	/system/recovery-from-boot.*
+	/system/etc/recovery-resource.dat
+	/system/etc/init.d/*
 
-  rm /system/media/audio/ui/camera_click.ogg
-  rm /system/media/audio/ui/camera_focus.ogg
-  rm /system/media/audio/ui/LowBattery.ogg
-  rm /system/media/audio/ui/VideoRecord.ogg
-  rm /system/media/audio/ui/VideoStop.ogg
+	/system/media/audio/ui/camera_click.ogg
+	/system/media/audio/ui/camera_focus.ogg
+	/system/media/audio/ui/LowBattery.ogg
+	/system/media/audio/ui/VideoRecord.ogg
+	/system/media/audio/ui/VideoStop.ogg
+EOF
 }
 
-function clean_cache() {
-  rm -r /cache/lost+found
-  rm -r /cache/recovery
+clean_cache() {
+  cat <<- EOF | xargs rm -rf
+	/cache/lost+found
+	/cache/recovery
 
-  rm -r /data/anr
-  rm -r /data/cache/recovery
+	/data/anr
+	/data/cache/recovery
 
-  rm /data/dalvik-cache/arm/*
-  rm /data/system/dropbox/*
-  rm /data/local/tmp/*
+	/data/dalvik-cache/arm/*
+	/data/system/dropbox/*
+	/data/local/tmp/*
+EOF
 }
 
-remount_system
+mount_system
 fix_captive
 clean_apps
 clean_misc
