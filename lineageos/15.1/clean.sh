@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/system/bin/sh
 
 #
 # Usage:
@@ -24,8 +24,14 @@ fix_captive() {
   settings put global captive_portal_other_fallback_urls http://www.qualcomm.cn/generate_204
 }
 
-clean_apps() {
-  cat <<- EOF | xargs rm -rf
+clean_system() {
+  for file in $(_get_delete_list); do
+    rm -r "$file"
+  done
+}
+
+_get_delete_list() {
+  cat <<- EOF
 	/system/app/BasicDreams
 	/system/app/BluetoothMidiService
 	/system/app/BookmarkProvider
@@ -77,34 +83,21 @@ clean_apps() {
 	/system/priv-app/SprintHiddenMenu
 	/system/priv-app/Tag
 	/system/priv-app/Updater
-EOF
-}
-
-clean_misc() {
-  cat <<- EOF | xargs rm -rf
-	/system/addon.d
-	/system/tts
-
-	/system/recovery-from-boot.*
-	/system/etc/recovery-resource.dat
-	/system/etc/init.d/*
 
 	/system/media/audio/ui/camera_click.ogg
 	/system/media/audio/ui/camera_focus.ogg
 	/system/media/audio/ui/LowBattery.ogg
 	/system/media/audio/ui/VideoRecord.ogg
 	/system/media/audio/ui/VideoStop.ogg
-EOF
-}
+	/system/addon.d
+	/system/tts
+	/system/recovery-from-boot.p
+	/system/etc/recovery-resource.dat
+	/system/etc/init.d/*
 
-clean_cache() {
-  cat <<- EOF | xargs rm -rf
-	/cache/lost+found
 	/cache/recovery
-
-	/data/anr
 	/data/cache/recovery
-
+	/data/anr/*
 	/data/dalvik-cache/arm/*
 	/data/system/dropbox/*
 	/data/local/tmp/*
@@ -113,6 +106,4 @@ EOF
 
 mount_system
 fix_captive
-clean_apps
-clean_misc
-clean_cache
+clean_system
