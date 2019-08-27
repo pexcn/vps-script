@@ -36,13 +36,11 @@ _get_delete_list() {
 	/system/app/LatinIME
 	/system/app/LineageBlackAccent
 	/system/app/LineageBlueAccent
-	/system/app/LineageCyanAccent
 	/system/app/LineageOrangeAccent
 	/system/app/LineagePinkAccent
 	/system/app/LineagePurpleAccent
 	/system/app/LineageRedAccent
 	/system/app/LineageBrownAccent
-	/system/app/LineageYellowAccent
 	/system/app/PacProcessor
 	/system/app/PhotoTable
 	/system/app/PicoTts
