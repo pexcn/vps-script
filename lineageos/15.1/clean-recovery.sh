@@ -25,7 +25,6 @@ _get_delete_list() {
 	/system/app/BookmarkProvider
 	/system/app/BuiltInPrintService
 	/system/app/Calendar
-	/system/app/CaptivePortalLogin
 	/system/app/CarrierDefaultApp
 	/system/app/CompanionDeviceManager
 	/system/app/CtsShimPrebuilt
@@ -79,7 +78,7 @@ _get_delete_list() {
 	/system/media/audio/ui/VideoStop.ogg
 	/system/addon.d
 	/system/tts
-	/system/recovery-from-boot.p
+	/system/recovery-from-boot.*
 	/system/etc/recovery-resource.dat
 	/system/etc/init.d/*
 

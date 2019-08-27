@@ -35,7 +35,6 @@ _get_delete_list() {
 	/system/app/BluetoothMidiService
 	/system/app/BookmarkProvider
 	/system/app/Calendar
-	/system/app/CaptivePortalLogin
 	/system/app/CtsShimPrebuilt
 	/system/app/Development
 	/system/app/EasterEgg
@@ -79,7 +78,7 @@ _get_delete_list() {
 	/system/media/audio/ui/VideoStop.ogg
 	/system/addon.d
 	/system/tts
-	/system/recovery-from-boot.p
+	/system/recovery-from-boot.*
 	/system/etc/recovery-resource.dat
 	/system/etc/init.d/*
 
