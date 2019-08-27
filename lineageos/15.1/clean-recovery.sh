@@ -31,6 +31,7 @@ _get_delete_list() {
 	/system/app/Development
 	/system/app/EasterEgg
 	/system/app/Email
+	/system/app/Exchange2
 	/system/app/HTMLViewer
 	/system/app/LatinIME
 	/system/app/LineageBlackAccent
