@@ -3,16 +3,16 @@
 cat << EOF > /etc/sysctl.d/99-optimize.conf
 vm.swappiness = 30
 fs.file-max = 262144
-net.core.rmem_max = 33554432
-net.core.wmem_max = 33554432
+net.core.rmem_max = 16777216
+net.core.wmem_max = 16777216
 net.core.rmem_default = 262144
 net.core.wmem_default = 262144
 net.core.netdev_max_backlog = 65535
 net.core.somaxconn = 4096
 net.netfilter.nf_conntrack_max = 32768
-net.ipv4.tcp_mem = 65536 98304 111360
-net.ipv4.tcp_rmem = 32768 262144 33554432
-net.ipv4.tcp_wmem = 32768 262144 33554432
+net.ipv4.tcp_mem = 16384 98304 111360
+net.ipv4.tcp_rmem = 8192 262144 16777216
+net.ipv4.tcp_wmem = 8192 262144 16777216
 net.ipv4.tcp_mtu_probing = 1
 net.ipv4.tcp_fin_timeout = 30
 net.ipv4.tcp_max_tw_buckets = 5000
