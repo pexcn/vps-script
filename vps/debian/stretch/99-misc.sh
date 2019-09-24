@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
 # timezone
-ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+ln -sf /usr/share/zoneinfo/ROC /etc/localtime
 dpkg-reconfigure -f noninteractive tzdata
 
 # ipv4 first
