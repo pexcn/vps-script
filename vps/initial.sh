@@ -26,8 +26,9 @@ case $(cat /etc/debian_version) in
     ./debian/buster/07-sysctl.sh
     ./debian/buster/08-cleaner.sh
     ./debian/buster/99-misc.sh
+    ;;
   *)
-	echo "Not supported."
+    echo "Not supported."
     exit 1
     ;;
 esac
