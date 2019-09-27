@@ -1,6 +1,5 @@
 #!/bin/bash -e
 
-#apt-mark manual openssh-server
 apt-get purge -y \
   apt-listchanges bind9-host bsdmainutils bzip2 console-setup \
   console-setup-linux cron dbus debconf-i18n debian-faq dh-python \
@@ -29,5 +28,4 @@ apt-get purge -y \
   wamerican whiptail xauth xkb-data xml-core xxd xz-utils vim-runtime \
   busybox groff-base libglib2.0-0 libglib2.0-data qemu-guest-agent xdg-user-dirs \
   libgpm2 libparted2 parted joe screen sudo unscd isc-dhcp-common
-apt-get autoremove -y
 apt-get clean

@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-cat << EOF > /etc/sysctl.d/99-optimize.conf
+cat << EOF > /etc/sysctl.d/80-optimize.conf
 vm.swappiness = 30
 fs.file-max = 262144
 net.core.rmem_max = 16777216
