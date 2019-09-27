@@ -2,5 +2,7 @@
 
 apt-get update
 apt-get install --no-install-recommends -y \
-  gcc make automake autoconf git tree
+  bash-completion dialog ca-certificates psmisc net-tools \
+  mtr-tiny traceroute gcc make automake autoconf libtool \
+  git nano tree curl
 apt-get clean
