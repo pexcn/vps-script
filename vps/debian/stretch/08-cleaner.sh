@@ -8,7 +8,7 @@ cd /var/cache/debconf && rm -f *-old
 cd /var/lib/apt/lists && rm -f * 2>/dev/null
 cd /var/cache/apt && rm -f * 2>/dev/null
 cd /var/cache/apt/archives && rm -f * 2>/dev/null
-cd /var && rm -rf backups local
+cd /var && rm -rf backups local mail
 find /var/log -type f | xargs truncate -s 0
 EOF
 chmod +x /usr/local/bin/cleaner
