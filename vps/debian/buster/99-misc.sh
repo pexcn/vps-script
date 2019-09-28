@@ -9,3 +9,4 @@ sed -i "s/#precedence ::ffff:0:0\/96  100/precedence ::ffff:0:0\/96  100/g" /etc
 
 # disable boot entries
 systemctl disable getty@.service
+#systemctl list-unit-files | grep enabled
