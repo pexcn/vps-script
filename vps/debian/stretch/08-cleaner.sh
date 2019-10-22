@@ -10,5 +10,7 @@ cd /var/cache/apt && rm -f * 2>/dev/null
 cd /var/cache/apt/archives && rm -f * 2>/dev/null
 cd /var && rm -rf backups local mail
 find /var/log -type f | xargs truncate -s 0
+journalctl --rotate
+journalctl --vacuum-time 1s
 EOF
 chmod +x /usr/local/bin/cleaner
