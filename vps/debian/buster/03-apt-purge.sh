@@ -5,7 +5,7 @@ apt-get purge -y \
   cloud-guest-utils cloud-init cloud-utils cloud-image-utils cron \
   dbus libpam-systemd packagekit packagekit-tools policykit-1 tuned \
   hdparm libappstream4 libcpupower1 libglib2.0-bin libgstreamer1.0-0 \
-  libpci3 libpolkit-agent-1-0 libpolkit-backend-1-0 libstemmer0d ethtool \
+  libpci3 libpolkit-agent-1-0 libpolkit-backend-1-0 libstemmer0d \
   libpolkit-gobject-1-0 linux-cpupower python3-decorator python3-pyudev \
   virt-what debconf-i18n distro-info-data lsb-release python3-distro-info \
   python3-software-properties software-properties-common unattended-upgrades \
@@ -30,7 +30,7 @@ apt-get purge -y \
   python3.7-minimal libsasl2-modules libsigc++-2.0-0v5 libsqlite3-0 screen \
   libtext-charwidth-perl libtext-iconv-perl libtext-wrapi18n-perl libxapian30 \
   libutempter0 libyaml-0-2 libc-l10n locales locales-all mime-support most \
-  pigz powermgmt-base sudo unscd vim-common vim-runtime vim-tiny xxd xz-utils \
+  pigz powermgmt-base sudo unscd vim-common vim-runtime vim-tiny xxd \
   libreadline7 xdg-user-dirs xkb-data acpi-support-base acpid discover discover-data \
   eject haveged installation-report laptop-detect libdiscover2 libhavege1 liblockfile-bin \
   libusb-0.1-4 libusb-1.0-0 usb.ids libnss-systemd libx11-6 libx11-data libxau6 libxcb1 \

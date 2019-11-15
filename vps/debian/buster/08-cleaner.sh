@@ -14,3 +14,4 @@ journalctl --rotate
 journalctl --vacuum-time 1s
 EOF
 chmod +x /usr/local/bin/cleaner
+chown root:staff /usr/local/bin/cleaner
