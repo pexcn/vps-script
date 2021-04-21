@@ -1,0 +1,3 @@
+[submodule "archlinux/vps2arch"]
+	path = archlinux/vps2arch
+	url = https://github.com/pexcn/vps2arch.git
