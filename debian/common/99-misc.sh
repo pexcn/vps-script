@@ -11,6 +11,13 @@ sed -i "s/#precedence ::ffff:0:0\/96  100/precedence ::ffff:0:0\/96  100/g" /etc
 #systemctl list-unit-files | grep enabled
 systemctl disable getty@.service
 
+# motd
+cat << EOF > /etc/motd
+
+Welcome to VPS!
+
+EOF
+
 # cleaner
 cat << EOF > /usr/local/bin/cleaner
 #!/bin/bash
