@@ -47,7 +47,7 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 rm -rf /x
 
 apk update
-apk add dropbear
+apk add dropbear bash
 rc-update add dropbear default
 rc-update add mdev sysinit
 rc-update add devfs sysinit
