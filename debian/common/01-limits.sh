@@ -1,7 +1,6 @@
 #!/bin/bash -e
 
 # system limits
-mkdir /etc/security/limits.d
 cat << EOF > /etc/security/limits.d/90-limits.conf
 * soft nofile 1048576
 * hard nofile 1048576
