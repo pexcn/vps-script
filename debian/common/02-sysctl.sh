@@ -21,6 +21,13 @@ net.core.netdev_max_backlog = 32768
 net.core.somaxconn = 4096
 net.netfilter.nf_conntrack_max = 32768
 
+# tcp fast open
+net.ipv4.tcp_fastopen = 3
+
+# tcp congestion control
+net.ipv4.tcp_congestion_control = bbr
+net.core.default_qdisc = fq_codel
+
 #
 # this values for low ram server (512MB) and high latency network (RTT 150ms+)
 #
@@ -32,11 +39,4 @@ net.core.rmem_max = 18750000
 net.core.wmem_max = 18750000
 net.core.rmem_default = 262144
 net.core.wmem_default = 262144
-
-# tcp fast open
-net.ipv4.tcp_fastopen = 3
-
-# tcp congestion control
-net.core.default_qdisc = fq_codel
-net.ipv4.tcp_congestion_control = bbr
 EOF
