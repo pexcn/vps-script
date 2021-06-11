@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-apt-get install locales --no-install-recommends
+apt-get install locales --no-install-recommends -y
 
 sed -i '/^# en_US.UTF-8 UTF-8/s/^# //' /etc/locale.gen
 sed -i '/^# zh_CN.UTF-8 UTF-8/s/^# //' /etc/locale.gen
