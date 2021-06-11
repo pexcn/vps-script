@@ -16,3 +16,12 @@ cat << EOF > /etc/motd
 Welcome to VPS!
 
 EOF
+
+# cleaner
+cat << EOF > /usr/local/bin/cleaner
+#!/bin/bash
+find /var/log -type f | xargs truncate -s 0
+journalctl --rotate
+journalctl --vacuum-time 1s
+EOF
+chmod +x /usr/local/bin/cleaner
