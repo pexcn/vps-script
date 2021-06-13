@@ -2,8 +2,8 @@
 
 command="/usr/local/bin/ssserver"
 command_args="--server-addr $SERVER_ADDR --password $PASSWORD --encrypt-method $ENCRYPT_METHOD --timeout ${TIMEOUT:-3600} --udp-timeout ${UDP_TIMEOUT:-300} --udp-max-associations ${UDP_MAX_ASSOCIATIONS:-512} --nofile ${NOFILE:-1048576} $EXTRA_ARGS"
-#command_args_background="--daemonize"
-command_background="yes"
+command_args_background="--daemonize --daemonize-pid /run/${RC_SVCNAME}.pid"
+#command_background="yes"
 pidfile="/run/${RC_SVCNAME}.pid"
 start_stop_daemon_args="--nicelevel -5"
 
