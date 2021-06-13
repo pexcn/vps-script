@@ -1,0 +1,12 @@
+#!/sbin/openrc-run
+
+command="/usr/local/bin/ss-server"
+command_args="-s $SERVER_HOST -p $SERVER_PORT -k $PASSWORD -m $ENCRYPT_METHOD -t ${TIMEOUT:-3600} -n ${NOFILE:-1048576} $EXTRA_ARGS"
+command_args_background="-f /run/${RC_SVCNAME}.pid"
+#command_background="yes"
+pidfile="/run/${RC_SVCNAME}.pid"
+start_stop_daemon_args="--nicelevel -5"
+
+depend() {
+    need net
+}

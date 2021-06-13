@@ -1,0 +1,7 @@
+SERVER_HOST=0.0.0.0
+SERVER_PORT=443
+PASSWORD=password
+ENCRYPT_METHOD=chacha20-ietf-poly1305
+#TIMEOUT=3600
+#NOFILE=1048576
+EXTRA_ARGS="-u --reuse-port --fast-open --no-delay"
