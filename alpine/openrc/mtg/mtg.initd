@@ -1,0 +1,11 @@
+#!/sbin/openrc-run
+
+command="/usr/local/bin/mtg"
+command_args="run /etc/mtg.toml"
+command_background="yes"
+pidfile="/run/${RC_SVCNAME}.pid"
+start_stop_daemon_args="--nicelevel -5"
+
+depend() {
+    need net
+}
