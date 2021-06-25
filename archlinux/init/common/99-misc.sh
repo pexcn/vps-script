@@ -8,7 +8,12 @@ sed -i "s/#precedence ::ffff:0:0\/96  100/precedence ::ffff:0:0\/96  100/g" /etc
 
 # disable boot entries
 #systemctl list-unit-files | grep enabled
-systemctl disable getty@.service
+systemctl mask getty@.service
+#systemctl mask getty@tty2.service
+#systemctl mask getty@tty3.service
+#systemctl mask getty@tty4.service
+#systemctl mask getty@tty5.service
+#systemctl mask getty@tty6.service
 
 # motd
 cat << EOF > /etc/motd
