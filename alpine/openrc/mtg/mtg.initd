@@ -1,7 +1,7 @@
 #!/sbin/openrc-run
 
 command="/usr/local/bin/mtg"
-command_args="run /etc/mtg.toml"
+command_args="simple-run $BIND_TO $SECRET --tcp-buffer=$TCP_BUFFER --timeout=$TIMEOUT --prefer-ip=$PREFER_IP --doh-ip=$DOH_IP"
 command_background="yes"
 pidfile="/run/${RC_SVCNAME}.pid"
 start_stop_daemon_args="--nicelevel -5"
