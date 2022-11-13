@@ -17,6 +17,14 @@ case $(cat /etc/debian_version) in
       "$file"
     done
     ;;
+  11*)
+    for file in bullseye/*.sh; do
+      "$file"
+    done
+    for file in common/*.sh; do
+      "$file"
+    done
+    ;;
   *)
     echo "Not supported."
     exit 1
