@@ -17,6 +17,7 @@ net.ipv4.tcp_max_syn_backlog = 8192
 net.ipv4.tcp_slow_start_after_idle = 0
 net.ipv4.tcp_orphan_retries = 1
 net.ipv4.ip_local_port_range = 10001 65000
+net.ipv4.ip_unprivileged_port_start = 0
 net.core.netdev_max_backlog = 32768
 net.core.somaxconn = 4096
 net.netfilter.nf_conntrack_max = 32768
