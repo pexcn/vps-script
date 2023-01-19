@@ -1,9 +1,9 @@
 #!/bin/bash
 
 apt-get purge -y \
-  acpi-support-base acpid apparmor busybox console-setup console-setup-linux cron dbus debconf-i18n \
+  acpi-support-base acpid apparmor busybox console-setup console-setup-linux cron debconf-i18n \
   discover discover-data distro-info-data dmidecode eject firmware-linux-free gcc-9-base haveged \
-  installation-report isc-dhcp-common kbd keyboard-configuration laptop-detect libdbus-1-3 libdiscover2 \
+  installation-report isc-dhcp-common kbd keyboard-configuration laptop-detect libdiscover2 \
   libestr0 libfastjson4 libglib2.0-0 libhavege2 libglib2.0-data libicu67 liblocale-gettext-perl \
   liblockfile-bin liblognorm5 libmpdec3 libnewt0.52 libnss-systemd libpam-systemd libpci3 libpopt0 \
   libpython3-stdlib libpython3.9-minimal libpython3.9-stdlib libsqlite3-0  libtext-charwidth-perl \
