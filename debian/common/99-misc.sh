@@ -1,4 +1,4 @@
-#!/bin/bash -e
+#!/bin/bash
 
 # timezone
 ln -sf /usr/share/zoneinfo/Asia/Taipei /etc/localtime
