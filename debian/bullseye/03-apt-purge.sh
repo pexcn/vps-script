@@ -1,7 +1,7 @@
 #!/bin/bash
 
 apt-get purge -y \
-  acpi-support-base acpid apparmor busybox console-setup console-setup-linux cron debconf-i18n \
+  acpi-support-base acpid busybox console-setup console-setup-linux cron debconf-i18n \
   discover discover-data distro-info-data dmidecode eject firmware-linux-free gcc-9-base haveged \
   installation-report isc-dhcp-common kbd keyboard-configuration laptop-detect libdiscover2 \
   libestr0 libfastjson4 libglib2.0-0 libhavege2 libglib2.0-data libicu67 liblocale-gettext-perl \

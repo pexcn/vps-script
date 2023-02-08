@@ -15,6 +15,8 @@ systemctl mask getty@.service
 #systemctl mask getty@tty4.service
 #systemctl mask getty@tty5.service
 #systemctl mask getty@tty6.service
+systemctl disable --now apparmor.service
+systemctl disable --now apt-daily.timer apt-daily-upgrade.timer
 
 # motd
 cat << EOF > /etc/motd
