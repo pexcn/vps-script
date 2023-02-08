@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
 apt-get purge -y \
-  apparmor aptitude aptitude-common bsdmainutils busybox bzip2 \
+  aptitude aptitude-common bsdmainutils busybox bzip2 \
   cloud-guest-utils cloud-init cloud-utils cloud-image-utils cron \
   libpam-systemd packagekit packagekit-tools policykit-1 tuned \
   hdparm libappstream4 libcpupower1 libglib2.0-bin libgstreamer1.0-0 \
